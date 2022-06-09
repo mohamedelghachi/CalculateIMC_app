@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Vue.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radiogroupe_homme_femme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="center|center_horizontal|center_vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioButton_homme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Homme" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton_femme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Femme" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="110dp"
+                        android:layout_height="48dp"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="Poids : " />
+
+                    <EditText
+                        android:id="@+id/editTextNumber_poids"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="Taille : " />
+
+                    <EditText
+                        android:id="@+id/editTextNumber_taille"
+                        android:layout_width="94dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:minHeight="48dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="111dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="Age : " />
+
+                    <EditText
+                        android:id="@+id/editTextNumber_age"
+                        android:layout_width="94dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:minHeight="48dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_calculer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALCULER" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView_imoj"
+                android:layout_width="171dp"
+                android:layout_height="158dp"
+                android:layout_marginLeft="16dp"
+                app:srcCompat="@drawable/normal" />
+
+            <TextView
+                android:id="@+id/textView_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:text="TextView" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
