@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Date;
+
 /**
  * @author EL GHACHI and mds youtube channel
  */
@@ -10,7 +12,7 @@ public class Profil {
     private static final int minHomme = 10;
     private static final int maxHomme = 25;
 
-
+    private Date dateMesure;
     private int poids;
     private int taille;
     private int age;
@@ -18,11 +20,32 @@ public class Profil {
     private float img;
     private String message;
 
-    public Profil(int poids, int taille, int age, int sexe) {
+    public Profil(Date dateMesure,int poids, int taille, int age, int sexe) {
+        this.dateMesure = dateMesure;
         this.poids = poids;
         this.taille = taille;
         this.age = age;
         this.sexe = sexe;
+    }
+
+    public Date getDateMesure() {
+        return dateMesure;
+    }
+
+    public int getPoids() {
+        return poids;
+    }
+
+    public int getTaille() {
+        return taille;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getSexe() {
+        return sexe;
     }
 
     public float getImg() {

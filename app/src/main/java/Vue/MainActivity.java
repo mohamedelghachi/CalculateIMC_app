@@ -29,12 +29,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView mtextView_result;
     private int mSexe = 1;
 
-    private Controle controle = Controle.getInstance();
+    private Controle controle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        controle = Controle.getInstance(this);
 
         mEditText_poids = findViewById(R.id.editTextNumber_poids);
         mEditText_taille = findViewById(R.id.editTextNumber_taille);
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mImageView_imoj = findViewById(R.id.imageView_imoj);
         mtextView_result = findViewById(R.id.textView_result);
 
-
+        recupProfil();
         //mButton_calculer.setEnabled(false);
 
         mButton_calculer.setOnClickListener(new View.OnClickListener() {
@@ -81,5 +83,19 @@ public class MainActivity extends AppCompatActivity {
                 mSexe = 0;
             }
         });
+    }
+
+    private void recupProfil() {
+        if(controle.getPoids() != null){
+            mEditText_poids.setText(controle.getPoids().toString());
+            mEditText_taille.setText(controle.getTaille().toString());
+            mEditText_age.setText(controle.getAge().toString());
+            int mSexe = Integer.parseInt(controle.getSexe().toString());
+            if(mSexe == 1){
+                mRadioButton_Homme.setChecked(true);
+            }else{
+                mRadioButton_Femme.setChecked(true);
+            }
+        }
     }
 }
